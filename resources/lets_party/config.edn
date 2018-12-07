@@ -1,0 +1,12 @@
+{:duct.core/project-ns  lets-party
+ :duct.core/environment :production
+
+ :duct.module/logging {}
+ :duct.module.web/site {}
+ :duct.module/cljs {:main lets-party.client}
+
+ :duct.module/ataraxy
+ {[:get "/example"] [:example]}
+
+ :lets-party.handler/example
+ {}}
