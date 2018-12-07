@@ -10,6 +10,7 @@
                  [duct/module.cljs "0.3.2"]]
   :plugins [[duct/lein-duct "0.10.6"]]
   :main ^:skip-aot lets-party.main
+  :jvm-opts ["-Dclojure.server.repl={:address \"0.0.0.0\" :port 9999 :accept clojure.core.server/repl}"]
   :resource-paths ["resources" "target/resources"]
   :prep-tasks     ["javac" "compile" ["run" ":duct/compiler"]]
   :profiles
@@ -23,4 +24,5 @@
                   :resource-paths ["dev/resources"]
                   :dependencies   [[integrant/repl "0.2.0"]
                                    [eftest "0.4.1"]
-                                   [kerodon "0.9.0"]]}})
+                                   [kerodon "0.9.0"]
+                                   [alembic "0.3.2"]]}})
